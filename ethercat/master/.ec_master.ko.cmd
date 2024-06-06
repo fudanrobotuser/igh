@@ -1,0 +1,1 @@
+cmd_/home/fudanrobotuser/ethercat/master/ec_master.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/fudanrobotuser/ethercat/master/ec_master.ko /home/fudanrobotuser/ethercat/master/ec_master.o /home/fudanrobotuser/ethercat/master/ec_master.mod.o;  true

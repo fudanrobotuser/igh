@@ -1,0 +1,1 @@
+cmd_/home/fudanrobotuser/ethercat/Module.symvers := sed 's/\.ko$$/\.o/' /home/fudanrobotuser/ethercat/modules.order | scripts/mod/modpost -m -a  -o /home/fudanrobotuser/ethercat/Module.symvers -e -i Module.symvers   -T -

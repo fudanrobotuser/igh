@@ -1,0 +1,1 @@
+cmd_/home/fudanrobotuser/ethercat/modules.order := {   cat /home/fudanrobotuser/ethercat/examples/modules.order;   cat /home/fudanrobotuser/ethercat/master/modules.order;   cat /home/fudanrobotuser/ethercat/devices/modules.order; :; } | awk '!x[$$0]++' - > /home/fudanrobotuser/ethercat/modules.order
