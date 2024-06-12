@@ -106,8 +106,6 @@ bool isEnabled[19] = {false, false, false, false, false, false, false, false, fa
 uint16_t statusOld[19] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 // 状态机切换的等待次数
 int statusDeCount[19] = {5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5};
-// 记录当前的位置
-int last_position[19] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
 // 伺服电机所有属性结构体,用于读取值的位置指针
 static struct
@@ -143,7 +141,7 @@ static struct
 
 // IGH主栈的主映射表,总计15个电机. 因为 0-3 口给扩展板用了,实际电机的总线分配序号为 4-18
 const static ec_pdo_entry_reg_t domain1_regs[] = {
-
+/*    
     //
     {0, 4, ElmoVidPid, 0x607a, 0, &offset[4].target_position},
     {0, 4, ElmoVidPid, 0x60fe, 0, &offset[4].DO},
@@ -273,7 +271,7 @@ const static ec_pdo_entry_reg_t domain1_regs[] = {
     {0, 16, ElmoVidPid, 0x60fd, 0, &offset[16].DI},
     {0, 16, ElmoVidPid, 0x606c, 0, &offset[16].act_velocity},
     {0, 16, ElmoVidPid, 0x6041, 0, &offset[16].status_word},
-
+*/
     {0, 17, ElmoVidPid, 0x607a, 0, &offset[17].target_position},
     {0, 17, ElmoVidPid, 0x60fe, 0, &offset[17].DO},
     {0, 17, ElmoVidPid, 0x6040, 0, &offset[17].ctrl_word},
@@ -374,7 +372,6 @@ void cyclic_task()
     int act_torque = 0;
     int act_velocity = 0;
     int target_postion = 0;
-    int act_positin_read = 0;
     int dir = 1;
     bool isAllEnabled = true;
     bool isAllInitedToZero = true;
@@ -394,7 +391,7 @@ void cyclic_task()
         isAllEnabled = true;
         isAllInitedToZero = true;
 
-        for (i2 = 4; i2 <= 18; i2++)
+        for (i2 = 17; i2 <= 18; i2++)
         {
             uint16_t ss = EC_READ_U16(domain1_pd + offset[i2].status_word);
             if (statusOld[i2] != ss)
@@ -416,14 +413,14 @@ void cyclic_task()
                     }
                     else if ((ss & 0xFF) == 0x31)
                     {
-                        last_position[i2] = EC_READ_S32(domain1_pd + offset[i2].act_position);
-                        EC_WRITE_S32(domain1_pd + offset[i2].target_position, last_position[i2]);
+                        act_position = EC_READ_S32(domain1_pd + offset[i2].act_position);
+                        EC_WRITE_S32(domain1_pd + offset[i2].target_position, act_position);
                         EC_WRITE_U16(domain1_pd + offset[i2].ctrl_word, 0x07);
                     }
                     else if ((ss & 0xFF) == 0x33)
                     {
-                        last_position[i2] = EC_READ_S32(domain1_pd + offset[i2].act_position);
-                        EC_WRITE_S32(domain1_pd + offset[i2].target_position, last_position[i2]);
+                        act_position = EC_READ_S32(domain1_pd + offset[i2].act_position);
+                        EC_WRITE_S32(domain1_pd + offset[i2].target_position, act_position);
                         EC_WRITE_U16(domain1_pd + offset[i2].ctrl_word, 0x0F);
                     }                    
                 }
@@ -441,7 +438,7 @@ void cyclic_task()
                 isEnabled[i2] = true;
 
                 // 判断所有电机都使能
-                for (i3 = 4; i3 <= 18; i3++)
+                for (i3 = 17; i3 <= 18; i3++)
                 {
                     isAllEnabled = (isAllEnabled && isEnabled[i3]);
                 }
@@ -454,19 +451,17 @@ void cyclic_task()
 
                     if (isInitedToZero[i2] == false)
                     {
-                        if (last_position[i2] > 80)
+                        if (act_position > 80)
                         {
-                            target_postion = last_position[i2] - 120;
-                            printf("position + %d,  %d to %d  \n", i2, last_position[i2], target_postion);
+                            target_postion = act_position - 120;
+                            printf("position + %d,  %d to %d  \n", i2, act_position, target_postion);
                             EC_WRITE_S32(domain1_pd + offset[i2].target_position, target_postion);
-                            last_position[i2] = target_postion;
                         }
-                        else if (last_position[i2] < -80)
+                        else if (act_position < -80)
                         {
-                            target_postion = last_position[i2] + 120;
-                            printf("position - %d,  %d to %d  \n", i2, last_position[i2], target_postion);
+                            target_postion = act_position + 120;
+                            printf("position - %d,  %d to %d  \n", i2, act_position, target_postion);
                             EC_WRITE_S32(domain1_pd + offset[i2].target_position, target_postion);
-                            last_position[i2] = target_postion;
                         }
                         else
                         {
@@ -475,14 +470,14 @@ void cyclic_task()
                     }
 
                     // 判断所有电机都零位
-                    for (i4 = 4; i4 <= 18; i4++)
+                    for (i4 = 17; i4 <= 18; i4++)
                     {
                         isAllInitedToZero = (isAllInitedToZero && isInitedToZero[i4]);
                     }
                     if(isAllInitedToZero)
                     {
                         //printf("isAllInitedToZero  \n");
-                        if (i2 == 4)
+                        if (i2 == 17)
                         {
                             memset(&reference, 0, sizeof(reference));
                             memset(&feedback, 0, sizeof(feedback));
@@ -493,7 +488,10 @@ void cyclic_task()
                             target_postion = reference.motor_ref[i2-4].target_postion;
                             EC_WRITE_S32(domain1_pd + offset[i2].target_position, target_postion);
                             printf("position %d,  %d to %d  \n", i2, act_position, target_postion);
-                            last_position[i2] = target_postion;
+                        }
+                        else
+                        {
+                            EC_WRITE_S32(domain1_pd + offset[i2].target_position, act_position);
                         }
                     }
 
@@ -502,6 +500,11 @@ void cyclic_task()
                     feedback.motor_fdbk[i2].feedbk_torque = act_torque;
                     feedback.motor_fdbk[i2].status_word = ss;
                     edb_push_fdbk(&feedback);
+                }
+                else
+                {
+                    act_position = EC_READ_S32(domain1_pd + offset[i2].act_position);
+                    EC_WRITE_S32(domain1_pd + offset[i2].target_position, act_position);
                 }
             }
         }
@@ -582,7 +585,7 @@ void Igh_init()
 
     printf("servo %d  begin init! \n", i);
 
-    for (ii = 4; ii <= 18; ii++)
+    for (ii = 17; ii <= 18; ii++)
     {
 
         ec_slave_config_t *sc;
