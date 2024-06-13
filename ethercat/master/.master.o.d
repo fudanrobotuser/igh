@@ -1,4 +1,4 @@
-master.o: /home/fudanrobotuser/ethercat/master/master.c \
+master.o: /home/fudanrobotuser/github/igh/ethercat/master/master.c \
  include/linux/compiler-version.h include/linux/kconfig.h \
  include/generated/autoconf.h include/linux/compiler_types.h \
  include/linux/compiler_attributes.h include/linux/compiler-gcc.h \
@@ -212,40 +212,40 @@ master.o: /home/fudanrobotuser/ethercat/master/master.c \
  include/linux/device/class.h include/linux/device/driver.h \
  arch/x86/include/asm/device.h include/linux/pm_wakeup.h \
  include/generated/uapi/linux/version.h include/linux/kthread.h \
- /home/fudanrobotuser/ethercat/master/globals.h \
- /home/fudanrobotuser/ethercat/master/../globals.h \
- /home/fudanrobotuser/ethercat/master/../config.h \
- /home/fudanrobotuser/ethercat/master/../include/ecrt.h \
- /home/fudanrobotuser/ethercat/master/slave.h \
- /home/fudanrobotuser/ethercat/master/datagram.h \
- /home/fudanrobotuser/ethercat/master/pdo.h \
- /home/fudanrobotuser/ethercat/master/pdo_entry.h \
- /home/fudanrobotuser/ethercat/master/sync.h \
- /home/fudanrobotuser/ethercat/master/pdo_list.h \
- /home/fudanrobotuser/ethercat/master/sync_config.h \
- /home/fudanrobotuser/ethercat/master/sdo.h \
- /home/fudanrobotuser/ethercat/master/sdo_entry.h \
- /home/fudanrobotuser/ethercat/master/fsm_slave.h \
- /home/fudanrobotuser/ethercat/master/sdo_request.h \
- /home/fudanrobotuser/ethercat/master/reg_request.h \
- /home/fudanrobotuser/ethercat/master/fsm_coe.h \
- /home/fudanrobotuser/ethercat/master/fsm_foe.h \
- /home/fudanrobotuser/ethercat/master/foe_request.h \
- /home/fudanrobotuser/ethercat/master/fsm_soe.h \
- /home/fudanrobotuser/ethercat/master/soe_request.h \
- /home/fudanrobotuser/ethercat/master/slave_config.h \
- /home/fudanrobotuser/ethercat/master/fmmu_config.h \
- /home/fudanrobotuser/ethercat/master/coe_emerg_ring.h \
- /home/fudanrobotuser/ethercat/master/flag.h \
- /home/fudanrobotuser/ethercat/master/device.h include/linux/interrupt.h \
- include/linux/irqreturn.h include/linux/irqnr.h \
- include/uapi/linux/irqnr.h include/linux/hardirq.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/globals.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/../globals.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/../config.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/../include/ecrt.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/slave.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/datagram.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/pdo.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/pdo_entry.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/sync.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/pdo_list.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/sync_config.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/sdo.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/sdo_entry.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/fsm_slave.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/sdo_request.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/reg_request.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/fsm_coe.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/fsm_foe.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/foe_request.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/fsm_soe.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/soe_request.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/slave_config.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/fmmu_config.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/coe_emerg_ring.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/flag.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/device.h \
+ include/linux/interrupt.h include/linux/irqreturn.h \
+ include/linux/irqnr.h include/uapi/linux/irqnr.h include/linux/hardirq.h \
  include/linux/context_tracking_state.h include/linux/ftrace_irq.h \
  include/linux/vtime.h arch/x86/include/asm/hardirq.h \
  arch/x86/include/asm/irq.h arch/x86/include/asm/irq_vectors.h \
  arch/x86/include/asm/sections.h include/asm-generic/sections.h \
  arch/x86/include/asm/extable.h \
- /home/fudanrobotuser/ethercat/master/../devices/ecdev.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/../devices/ecdev.h \
  include/linux/netdevice.h include/linux/prefetch.h \
  include/linux/dynamic_queue_limits.h include/net/net_namespace.h \
  include/net/flow.h include/linux/socket.h \
@@ -356,14 +356,15 @@ master.o: /home/fudanrobotuser/ethercat/master/master.c \
  include/linux/if_link.h include/uapi/linux/if_link.h \
  include/uapi/linux/if_bonding.h include/uapi/linux/pkt_cls.h \
  include/uapi/linux/pkt_sched.h include/linux/hashtable.h \
- /home/fudanrobotuser/ethercat/master/master.h \
- /home/fudanrobotuser/ethercat/master/domain.h \
- /home/fudanrobotuser/ethercat/master/ethernet.h \
- /home/fudanrobotuser/ethercat/master/fsm_master.h \
- /home/fudanrobotuser/ethercat/master/fsm_slave_config.h \
- /home/fudanrobotuser/ethercat/master/fsm_change.h \
- /home/fudanrobotuser/ethercat/master/fsm_pdo.h \
- /home/fudanrobotuser/ethercat/master/fsm_pdo_entry.h \
- /home/fudanrobotuser/ethercat/master/fsm_slave_scan.h \
- /home/fudanrobotuser/ethercat/master/fsm_sii.h \
- /home/fudanrobotuser/ethercat/master/cdev.h include/linux/cdev.h
+ /home/fudanrobotuser/github/igh/ethercat/master/master.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/domain.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/ethernet.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/fsm_master.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/fsm_slave_config.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/fsm_change.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/fsm_pdo.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/fsm_pdo_entry.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/fsm_slave_scan.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/fsm_sii.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/cdev.h \
+ include/linux/cdev.h

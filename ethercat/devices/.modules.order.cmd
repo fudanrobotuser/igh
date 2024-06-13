@@ -1,1 +1,1 @@
-cmd_/home/fudanrobotuser/ethercat/devices/modules.order := {   echo /home/fudanrobotuser/ethercat/devices/ec_generic.ko; :; } | awk '!x[$$0]++' - > /home/fudanrobotuser/ethercat/devices/modules.order
+cmd_/home/fudanrobotuser/github/igh/ethercat/devices/modules.order := {   echo /home/fudanrobotuser/github/igh/ethercat/devices/ec_generic.ko; :; } | awk '!x[$$0]++' - > /home/fudanrobotuser/github/igh/ethercat/devices/modules.order

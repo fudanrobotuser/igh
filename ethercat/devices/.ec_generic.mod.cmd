@@ -1,1 +1,1 @@
-cmd_/home/fudanrobotuser/ethercat/devices/ec_generic.mod := { echo  /home/fudanrobotuser/ethercat/devices/generic.o;  echo; } > /home/fudanrobotuser/ethercat/devices/ec_generic.mod
+cmd_/home/fudanrobotuser/github/igh/ethercat/devices/ec_generic.mod := { echo  /home/fudanrobotuser/github/igh/ethercat/devices/generic.o;  echo; } > /home/fudanrobotuser/github/igh/ethercat/devices/ec_generic.mod

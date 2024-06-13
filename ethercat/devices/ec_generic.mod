@@ -1,2 +1,2 @@
-/home/fudanrobotuser/ethercat/devices/generic.o
+/home/fudanrobotuser/github/igh/ethercat/devices/generic.o
 

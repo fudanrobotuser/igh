@@ -1,1 +1,1 @@
-cmd_/home/fudanrobotuser/ethercat/examples/mini/ec_mini.mod := { echo  /home/fudanrobotuser/ethercat/examples/mini/mini.o;  echo; } > /home/fudanrobotuser/ethercat/examples/mini/ec_mini.mod
+cmd_/home/fudanrobotuser/github/igh/ethercat/examples/mini/ec_mini.mod := { echo  /home/fudanrobotuser/github/igh/ethercat/examples/mini/mini.o;  echo; } > /home/fudanrobotuser/github/igh/ethercat/examples/mini/ec_mini.mod

@@ -1,4 +1,5 @@
-soe_request.o: /home/fudanrobotuser/ethercat/master/soe_request.c \
+soe_request.o: \
+ /home/fudanrobotuser/github/igh/ethercat/master/soe_request.c \
  include/linux/compiler-version.h include/linux/kconfig.h \
  include/generated/autoconf.h include/linux/compiler_types.h \
  include/linux/compiler_attributes.h include/linux/compiler-gcc.h \
@@ -170,8 +171,8 @@ soe_request.o: /home/fudanrobotuser/ethercat/master/soe_request.c \
  arch/x86/include/asm/module.h include/asm-generic/module.h \
  arch/x86/include/asm/orc_types.h include/linux/slab.h \
  include/linux/percpu-refcount.h include/linux/kasan.h \
- /home/fudanrobotuser/ethercat/master/soe_request.h \
- /home/fudanrobotuser/ethercat/master/globals.h \
- /home/fudanrobotuser/ethercat/master/../globals.h \
- /home/fudanrobotuser/ethercat/master/../config.h \
- /home/fudanrobotuser/ethercat/master/../include/ecrt.h
+ /home/fudanrobotuser/github/igh/ethercat/master/soe_request.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/globals.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/../globals.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/../config.h \
+ /home/fudanrobotuser/github/igh/ethercat/master/../include/ecrt.h

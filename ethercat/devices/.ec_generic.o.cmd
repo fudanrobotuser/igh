@@ -1,1 +1,1 @@
-cmd_/home/fudanrobotuser/ethercat/devices/ec_generic.o := ld -m elf_x86_64 -z noexecstack   -r -o /home/fudanrobotuser/ethercat/devices/ec_generic.o /home/fudanrobotuser/ethercat/devices/generic.o
+cmd_/home/fudanrobotuser/github/igh/ethercat/devices/ec_generic.o := ld -m elf_x86_64 -z noexecstack   -r -o /home/fudanrobotuser/github/igh/ethercat/devices/ec_generic.o /home/fudanrobotuser/github/igh/ethercat/devices/generic.o

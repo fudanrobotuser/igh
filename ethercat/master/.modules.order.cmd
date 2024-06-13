@@ -1,1 +1,1 @@
-cmd_/home/fudanrobotuser/ethercat/master/modules.order := {   echo /home/fudanrobotuser/ethercat/master/ec_master.ko; :; } | awk '!x[$$0]++' - > /home/fudanrobotuser/ethercat/master/modules.order
+cmd_/home/fudanrobotuser/github/igh/ethercat/master/modules.order := {   echo /home/fudanrobotuser/github/igh/ethercat/master/ec_master.ko; :; } | awk '!x[$$0]++' - > /home/fudanrobotuser/github/igh/ethercat/master/modules.order

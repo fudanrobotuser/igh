@@ -1,3 +1,3 @@
-/home/fudanrobotuser/ethercat/examples/mini/ec_mini.ko
-/home/fudanrobotuser/ethercat/master/ec_master.ko
-/home/fudanrobotuser/ethercat/devices/ec_generic.ko
+/home/fudanrobotuser/github/igh/ethercat/examples/mini/ec_mini.ko
+/home/fudanrobotuser/github/igh/ethercat/master/ec_master.ko
+/home/fudanrobotuser/github/igh/ethercat/devices/ec_generic.ko

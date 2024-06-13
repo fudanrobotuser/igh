@@ -1,2 +1,2 @@
-/home/fudanrobotuser/ethercat/examples/mini/mini.o
+/home/fudanrobotuser/github/igh/ethercat/examples/mini/mini.o
 

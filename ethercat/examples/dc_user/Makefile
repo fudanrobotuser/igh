@@ -132,7 +132,8 @@ CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 PROGRAMS = $(noinst_PROGRAMS)
-am_ec_dc_user_example_OBJECTS = ec_dc_user_example-main.$(OBJEXT)
+am_ec_dc_user_example_OBJECTS = ec_dc_user_example-main.$(OBJEXT) \
+	ec_dc_user_example-ecat_data_buffer.$(OBJEXT)
 ec_dc_user_example_OBJECTS = $(am_ec_dc_user_example_OBJECTS)
 ec_dc_user_example_LDADD = $(LDADD)
 AM_V_lt = $(am__v_lt_$(V))
@@ -158,7 +159,9 @@ am__v_at_1 =
 DEFAULT_INCLUDES = -I. -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/autoconf/depcomp
 am__maybe_remake_depfiles = depfiles
-am__depfiles_remade = ./$(DEPDIR)/ec_dc_user_example-main.Po
+am__depfiles_remade =  \
+	./$(DEPDIR)/ec_dc_user_example-ecat_data_buffer.Po \
+	./$(DEPDIR)/ec_dc_user_example-main.Po
 am__mv = mv -f
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
@@ -204,13 +207,13 @@ am__define_uniq_tagged_files = \
   done | $(am__uniquify_input)`
 am__DIST_COMMON = $(srcdir)/Makefile.in $(top_srcdir)/autoconf/depcomp
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} '/home/fudanrobotuser/ethercat/autoconf/missing' aclocal-1.16
+ACLOCAL = ${SHELL} '/home/fudanrobotuser/github/igh/ethercat/autoconf/missing' aclocal-1.16
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
 AR = ar
-AUTOCONF = ${SHELL} '/home/fudanrobotuser/ethercat/autoconf/missing' autoconf
-AUTOHEADER = ${SHELL} '/home/fudanrobotuser/ethercat/autoconf/missing' autoheader
-AUTOMAKE = ${SHELL} '/home/fudanrobotuser/ethercat/autoconf/missing' automake-1.16
+AUTOCONF = ${SHELL} '/home/fudanrobotuser/github/igh/ethercat/autoconf/missing' autoconf
+AUTOHEADER = ${SHELL} '/home/fudanrobotuser/github/igh/ethercat/autoconf/missing' autoheader
+AUTOMAKE = ${SHELL} '/home/fudanrobotuser/github/igh/ethercat/autoconf/missing' automake-1.16
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -273,12 +276,12 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
-LINUX_SOURCE_DIR = /usr/src/linux-headers-5.15.0-1063-realtime
+LINUX_SOURCE_DIR = /usr/src/linux-headers-5.15.0-1061-realtime
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
-MAKEINFO = ${SHELL} '/home/fudanrobotuser/ethercat/autoconf/missing' makeinfo
+MAKEINFO = ${SHELL} '/home/fudanrobotuser/github/igh/ethercat/autoconf/missing' makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /usr/bin/mkdir -p
 NM = /usr/bin/nm -B
@@ -315,10 +318,10 @@ XENOMAI_POSIX_CFLAGS =
 XENOMAI_POSIX_LDFLAGS = 
 XENOMAI_RTDM_CFLAGS = 
 XENOMAI_RTDM_LDFLAGS = 
-abs_builddir = /home/fudanrobotuser/ethercat/examples/dc_user
-abs_srcdir = /home/fudanrobotuser/ethercat/examples/dc_user
-abs_top_builddir = /home/fudanrobotuser/ethercat
-abs_top_srcdir = /home/fudanrobotuser/ethercat
+abs_builddir = /home/fudanrobotuser/github/igh/ethercat/examples/dc_user
+abs_srcdir = /home/fudanrobotuser/github/igh/ethercat/examples/dc_user
+abs_top_builddir = /home/fudanrobotuser/github/igh/ethercat
+abs_top_srcdir = /home/fudanrobotuser/github/igh/ethercat
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -348,7 +351,7 @@ host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/fudanrobotuser/ethercat/autoconf/install-sh
+install_sh = ${SHELL} /home/fudanrobotuser/github/igh/ethercat/autoconf/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -371,7 +374,7 @@ target_alias =
 top_build_prefix = ../../
 top_builddir = ../..
 top_srcdir = ../..
-ec_dc_user_example_SOURCES = main.c
+ec_dc_user_example_SOURCES = main.c ecat_data_buffer.c
 ec_dc_user_example_CFLAGS = -I$(top_srcdir)/include -Wall
 ec_dc_user_example_LDFLAGS = -L$(top_builddir)/lib/.libs -lethercat -lrt
 all: all-am
@@ -427,6 +430,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+include ./$(DEPDIR)/ec_dc_user_example-ecat_data_buffer.Po # am--include-marker
 include ./$(DEPDIR)/ec_dc_user_example-main.Po # am--include-marker
 
 $(am__depfiles_remade):
@@ -472,6 +476,20 @@ ec_dc_user_example-main.obj: main.c
 #	$(AM_V_CC)source='main.c' object='ec_dc_user_example-main.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
 #	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ec_dc_user_example_CFLAGS) $(CFLAGS) -c -o ec_dc_user_example-main.obj `if test -f 'main.c'; then $(CYGPATH_W) 'main.c'; else $(CYGPATH_W) '$(srcdir)/main.c'; fi`
+
+ec_dc_user_example-ecat_data_buffer.o: ecat_data_buffer.c
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ec_dc_user_example_CFLAGS) $(CFLAGS) -MT ec_dc_user_example-ecat_data_buffer.o -MD -MP -MF $(DEPDIR)/ec_dc_user_example-ecat_data_buffer.Tpo -c -o ec_dc_user_example-ecat_data_buffer.o `test -f 'ecat_data_buffer.c' || echo '$(srcdir)/'`ecat_data_buffer.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/ec_dc_user_example-ecat_data_buffer.Tpo $(DEPDIR)/ec_dc_user_example-ecat_data_buffer.Po
+#	$(AM_V_CC)source='ecat_data_buffer.c' object='ec_dc_user_example-ecat_data_buffer.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ec_dc_user_example_CFLAGS) $(CFLAGS) -c -o ec_dc_user_example-ecat_data_buffer.o `test -f 'ecat_data_buffer.c' || echo '$(srcdir)/'`ecat_data_buffer.c
+
+ec_dc_user_example-ecat_data_buffer.obj: ecat_data_buffer.c
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ec_dc_user_example_CFLAGS) $(CFLAGS) -MT ec_dc_user_example-ecat_data_buffer.obj -MD -MP -MF $(DEPDIR)/ec_dc_user_example-ecat_data_buffer.Tpo -c -o ec_dc_user_example-ecat_data_buffer.obj `if test -f 'ecat_data_buffer.c'; then $(CYGPATH_W) 'ecat_data_buffer.c'; else $(CYGPATH_W) '$(srcdir)/ecat_data_buffer.c'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/ec_dc_user_example-ecat_data_buffer.Tpo $(DEPDIR)/ec_dc_user_example-ecat_data_buffer.Po
+#	$(AM_V_CC)source='ecat_data_buffer.c' object='ec_dc_user_example-ecat_data_buffer.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ec_dc_user_example_CFLAGS) $(CFLAGS) -c -o ec_dc_user_example-ecat_data_buffer.obj `if test -f 'ecat_data_buffer.c'; then $(CYGPATH_W) 'ecat_data_buffer.c'; else $(CYGPATH_W) '$(srcdir)/ecat_data_buffer.c'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo
@@ -603,7 +621,8 @@ clean-am: clean-generic clean-libtool clean-noinstPROGRAMS \
 	mostlyclean-am
 
 distclean: distclean-am
-		-rm -f ./$(DEPDIR)/ec_dc_user_example-main.Po
+		-rm -f ./$(DEPDIR)/ec_dc_user_example-ecat_data_buffer.Po
+	-rm -f ./$(DEPDIR)/ec_dc_user_example-main.Po
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-tags
@@ -649,7 +668,8 @@ install-ps-am:
 installcheck-am:
 
 maintainer-clean: maintainer-clean-am
-		-rm -f ./$(DEPDIR)/ec_dc_user_example-main.Po
+		-rm -f ./$(DEPDIR)/ec_dc_user_example-ecat_data_buffer.Po
+	-rm -f ./$(DEPDIR)/ec_dc_user_example-main.Po
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 

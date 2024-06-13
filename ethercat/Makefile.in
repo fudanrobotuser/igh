@@ -209,7 +209,8 @@ am__DIST_COMMON = $(srcdir)/Doxyfile.in $(srcdir)/Kbuild.in \
 	$(top_srcdir)/autoconf/missing AUTHORS COPYING COPYING.LESSER \
 	ChangeLog INSTALL.md NEWS README.md TODO autoconf/ar-lib \
 	autoconf/compile autoconf/config.guess autoconf/config.sub \
-	autoconf/install-sh autoconf/ltmain.sh autoconf/missing
+	autoconf/depcomp autoconf/install-sh autoconf/ltmain.sh \
+	autoconf/missing
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)

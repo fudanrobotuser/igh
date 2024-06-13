@@ -1,8 +1,8 @@
-cmd_/home/fudanrobotuser/ethercat/master/device.o := gcc -Wp,-MMD,/home/fudanrobotuser/ethercat/master/.device.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-linux-gnu/11/include -I./arch/x86/include -I./arch/x86/include/generated  -I./include -I./arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/compiler-version.h -include ./include/linux/kconfig.h -I./ubuntu/include -include ./include/linux/compiler_types.h -D__KERNEL__ -fmacro-prefix-map=./= -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE -Werror=implicit-function-declaration -Werror=implicit-int -Werror=return-type -Wno-format-security -std=gnu89 -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -fcf-protection=none -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -DCONFIG_X86_X32_ABI -Wno-sign-compare -fno-asynchronous-unwind-tables -mindirect-branch=thunk-extern -mindirect-branch-register -mindirect-branch-cs-prefix -mfunction-return=thunk-extern -fno-jump-tables -mharden-sls=all -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-address-of-packed-member -O2 -fno-allow-store-data-races -Wframe-larger-than=1024 -fstack-protector-strong -Wimplicit-fallthrough=5 -Wno-main -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-stack-clash-protection -g -gdwarf-5 -pg -mrecord-mcount -mfentry -DCC_USING_FENTRY -Wdeclaration-after-statement -Wvla -Wno-pointer-sign -Wno-stringop-truncation -Wno-zero-length-bounds -Wno-array-bounds -Wno-stringop-overflow -Wno-restrict -Wno-maybe-uninitialized -Wno-alloc-size-larger-than -fno-strict-overflow -fno-stack-check -fconserve-stack -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -Wno-packed-not-aligned  -fsanitize=bounds -fsanitize=shift -fsanitize=bool -fsanitize=enum  -DMODULE  -DKBUILD_BASENAME='"device"' -DKBUILD_MODNAME='"ec_master"' -D__KBUILD_MODNAME=kmod_ec_master -c -o /home/fudanrobotuser/ethercat/master/device.o /home/fudanrobotuser/ethercat/master/device.c
+cmd_/home/fudanrobotuser/github/igh/ethercat/master/device.o := gcc -Wp,-MMD,/home/fudanrobotuser/github/igh/ethercat/master/.device.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-linux-gnu/11/include -I./arch/x86/include -I./arch/x86/include/generated  -I./include -I./arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/compiler-version.h -include ./include/linux/kconfig.h -I./ubuntu/include -include ./include/linux/compiler_types.h -D__KERNEL__ -fmacro-prefix-map=./= -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE -Werror=implicit-function-declaration -Werror=implicit-int -Werror=return-type -Wno-format-security -std=gnu89 -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -fcf-protection=none -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -DCONFIG_X86_X32_ABI -Wno-sign-compare -fno-asynchronous-unwind-tables -mindirect-branch=thunk-extern -mindirect-branch-register -mindirect-branch-cs-prefix -mfunction-return=thunk-extern -fno-jump-tables -mharden-sls=all -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-address-of-packed-member -O2 -fno-allow-store-data-races -Wframe-larger-than=1024 -fstack-protector-strong -Wimplicit-fallthrough=5 -Wno-main -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-stack-clash-protection -g -gdwarf-5 -pg -mrecord-mcount -mfentry -DCC_USING_FENTRY -Wdeclaration-after-statement -Wvla -Wno-pointer-sign -Wno-stringop-truncation -Wno-zero-length-bounds -Wno-array-bounds -Wno-stringop-overflow -Wno-restrict -Wno-maybe-uninitialized -Wno-alloc-size-larger-than -fno-strict-overflow -fno-stack-check -fconserve-stack -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -Wno-packed-not-aligned  -fsanitize=bounds -fsanitize=shift -fsanitize=bool -fsanitize=enum  -DMODULE  -DKBUILD_BASENAME='"device"' -DKBUILD_MODNAME='"ec_master"' -D__KBUILD_MODNAME=kmod_ec_master -c -o /home/fudanrobotuser/github/igh/ethercat/master/device.o /home/fudanrobotuser/github/igh/ethercat/master/device.c
 
-source_/home/fudanrobotuser/ethercat/master/device.o := /home/fudanrobotuser/ethercat/master/device.c
+source_/home/fudanrobotuser/github/igh/ethercat/master/device.o := /home/fudanrobotuser/github/igh/ethercat/master/device.c
 
-deps_/home/fudanrobotuser/ethercat/master/device.o := \
+deps_/home/fudanrobotuser/github/igh/ethercat/master/device.o := \
   include/linux/compiler-version.h \
     $(wildcard include/config/CC_VERSION_TEXT) \
   include/linux/kconfig.h \
@@ -1323,44 +1323,44 @@ deps_/home/fudanrobotuser/ethercat/master/device.o := \
   include/uapi/linux/pkt_cls.h \
   include/uapi/linux/pkt_sched.h \
   include/linux/hashtable.h \
-  /home/fudanrobotuser/ethercat/master/device.h \
-  /home/fudanrobotuser/ethercat/master/../devices/ecdev.h \
-  /home/fudanrobotuser/ethercat/master/globals.h \
-  /home/fudanrobotuser/ethercat/master/../globals.h \
-  /home/fudanrobotuser/ethercat/master/../config.h \
-  /home/fudanrobotuser/ethercat/master/../include/ecrt.h \
-  /home/fudanrobotuser/ethercat/master/master.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/device.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/../devices/ecdev.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/globals.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/../globals.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/../config.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/../include/ecrt.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/master.h \
   include/generated/uapi/linux/version.h \
-  /home/fudanrobotuser/ethercat/master/domain.h \
-  /home/fudanrobotuser/ethercat/master/datagram.h \
-  /home/fudanrobotuser/ethercat/master/fmmu_config.h \
-  /home/fudanrobotuser/ethercat/master/sync.h \
-  /home/fudanrobotuser/ethercat/master/pdo_list.h \
-  /home/fudanrobotuser/ethercat/master/pdo.h \
-  /home/fudanrobotuser/ethercat/master/pdo_entry.h \
-  /home/fudanrobotuser/ethercat/master/sync_config.h \
-  /home/fudanrobotuser/ethercat/master/ethernet.h \
-  /home/fudanrobotuser/ethercat/master/slave.h \
-  /home/fudanrobotuser/ethercat/master/sdo.h \
-  /home/fudanrobotuser/ethercat/master/sdo_entry.h \
-  /home/fudanrobotuser/ethercat/master/fsm_slave.h \
-  /home/fudanrobotuser/ethercat/master/sdo_request.h \
-  /home/fudanrobotuser/ethercat/master/reg_request.h \
-  /home/fudanrobotuser/ethercat/master/fsm_coe.h \
-  /home/fudanrobotuser/ethercat/master/fsm_foe.h \
-  /home/fudanrobotuser/ethercat/master/foe_request.h \
-  /home/fudanrobotuser/ethercat/master/fsm_soe.h \
-  /home/fudanrobotuser/ethercat/master/soe_request.h \
-  /home/fudanrobotuser/ethercat/master/fsm_master.h \
-  /home/fudanrobotuser/ethercat/master/fsm_slave_config.h \
-  /home/fudanrobotuser/ethercat/master/fsm_change.h \
-  /home/fudanrobotuser/ethercat/master/fsm_pdo.h \
-  /home/fudanrobotuser/ethercat/master/fsm_pdo_entry.h \
-  /home/fudanrobotuser/ethercat/master/fsm_slave_scan.h \
-  /home/fudanrobotuser/ethercat/master/fsm_sii.h \
-  /home/fudanrobotuser/ethercat/master/cdev.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/domain.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/datagram.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/fmmu_config.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/sync.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/pdo_list.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/pdo.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/pdo_entry.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/sync_config.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/ethernet.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/slave.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/sdo.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/sdo_entry.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/fsm_slave.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/sdo_request.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/reg_request.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/fsm_coe.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/fsm_foe.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/foe_request.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/fsm_soe.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/soe_request.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/fsm_master.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/fsm_slave_config.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/fsm_change.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/fsm_pdo.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/fsm_pdo_entry.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/fsm_slave_scan.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/fsm_sii.h \
+  /home/fudanrobotuser/github/igh/ethercat/master/cdev.h \
   include/linux/cdev.h \
 
-/home/fudanrobotuser/ethercat/master/device.o: $(deps_/home/fudanrobotuser/ethercat/master/device.o)
+/home/fudanrobotuser/github/igh/ethercat/master/device.o: $(deps_/home/fudanrobotuser/github/igh/ethercat/master/device.o)
 
-$(deps_/home/fudanrobotuser/ethercat/master/device.o):
+$(deps_/home/fudanrobotuser/github/igh/ethercat/master/device.o):
